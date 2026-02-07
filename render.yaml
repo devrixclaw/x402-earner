@@ -1,0 +1,14 @@
+services:
+- type: web
+  name: x402-earner
+  env: node
+  branch: main
+  buildCommand: npm install
+  startCommand: node server.js
+  envVars:
+  - key: SOLANA_NETWORK
+    value: mainnet-beta
+  - key: MERCHANT_WALLET
+    value: 8uWJWAnmnmv1DcZ8hQu62E9d4Mg8oB2aYhLTSQ5UgxFs
+  - key: NODE_ENV
+    value: production
